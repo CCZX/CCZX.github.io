@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="JavaScript,css,">
 
 
 
@@ -86,14 +86,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="1.DOM部分1.1只读属性只能获取，不能设置，获取的值是不带单位的 (1).clientWidth 和 clientHeight获取可视区部分的宽高，即padding+content，如果有滚动条，则该属性的值就是原本的宽高减去滚动条的宽度。 (2).offsetWidth和offsetHeight获取元素的border+padding+content的宽高，该属性和内部的内容是否超出元素大小无">
+<meta name="keywords" content="JavaScript,css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浏览器中的各种宽高">
+<meta property="og:url" content="http://yoursite.com/2019/01/18/浏览器中的各种宽高/index.html">
 <meta property="og:site_name" content="chen&#39;blog">
+<meta property="og:description" content="1.DOM部分1.1只读属性只能获取，不能设置，获取的值是不带单位的 (1).clientWidth 和 clientHeight获取可视区部分的宽高，即padding+content，如果有滚动条，则该属性的值就是原本的宽高减去滚动条的宽度。 (2).offsetWidth和offsetHeight获取元素的border+padding+content的宽高，该属性和内部的内容是否超出元素大小无">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-12T02:51:31.074Z">
+<meta property="og:updated_time" content="2019-01-18T14:00:20.366Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
+<meta name="twitter:title" content="浏览器中的各种宽高">
+<meta name="twitter:description" content="1.DOM部分1.1只读属性只能获取，不能设置，获取的值是不带单位的 (1).clientWidth 和 clientHeight获取可视区部分的宽高，即padding+content，如果有滚动条，则该属性的值就是原本的宽高减去滚动条的宽度。 (2).offsetWidth和offsetHeight获取元素的border+padding+content的宽高，该属性和内部的内容是否超出元素大小无">
 
 
 
@@ -123,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/">
+  <link rel="canonical" href="http://yoursite.com/2019/01/18/浏览器中的各种宽高/">
 
 
 
 
 
-  <title>about | chen'blog</title>
+  <title>浏览器中的各种宽高 | chen'blog</title>
   
 
 
@@ -286,33 +290,256 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/18/浏览器中的各种宽高/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陈超">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="chen'blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">about</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">浏览器中的各种宽高</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-18T16:56:14+08:00">
+                2019-01-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/18/浏览器中的各种宽高/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/18/浏览器中的各种宽高/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读数<i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  709
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h1 id="1-DOM部分"><a href="#1-DOM部分" class="headerlink" title="1.DOM部分"></a>1.DOM部分</h1><h2 id="1-1只读属性"><a href="#1-1只读属性" class="headerlink" title="1.1只读属性"></a>1.1只读属性</h2><p><strong>只能获取，不能设置，获取的值是不带单位的</strong></p>
+<h3 id="1-clientWidth-和-clientHeight"><a href="#1-clientWidth-和-clientHeight" class="headerlink" title="(1).clientWidth 和 clientHeight"></a>(1).clientWidth 和 clientHeight</h3><p>获取可视区部分的宽高，即<strong>padding+content</strong>，如果有滚动条，则该属性的值就是<strong>原本的宽高减去滚动条的宽度</strong>。</p>
+<h3 id="2-offsetWidth和offsetHeight"><a href="#2-offsetWidth和offsetHeight" class="headerlink" title="(2).offsetWidth和offsetHeight"></a>(2).offsetWidth和offsetHeight</h3><p>获取元素的<strong>border+padding+content</strong>的宽高，该属性和内部的内容是否超出元素大小无关，<strong>只与原来的border和width有关</strong>。</p>
+<h3 id="3-clientTop和clientLeft"><a href="#3-clientTop和clientLeft" class="headerlink" title="(3).clientTop和clientLeft"></a>(3).clientTop和clientLeft</h3><p>获取元素的border的宽度和高度</p>
+<h3 id="4-offsetTop和offsetLeft"><a href="#4-offsetTop和offsetLeft" class="headerlink" title="(4).offsetTop和offsetLeft"></a>(4).offsetTop和offsetLeft</h3><p>说到这一对属性就要说到offsetParent,其表示当前元素的离自己最近的具有定位的父级元素，该父级元素就是当前元素的offsetParent，如果一直向上查找也找不到这样一个父级元素，那么当前元素的ofsetParent就是body元素。</p>
+<p>offsetLeft和offsetTop就是指的是当前元素当对于其offsetParent的左边距离和上边距离，级当前元素的border到它的offsetParent的border的距离。</p>
+<h3 id="5-scrollHeight和scrollWidth"><a href="#5-scrollHeight和scrollWidth" class="headerlink" title="(5).scrollHeight和scrollWidth"></a>(5).scrollHeight和scrollWidth</h3><p>当元素内部的内容超出其宽的和高度的时候，scrollHeight和scrollWidth表示内部元素的实际宽高，当没有超出其宽高时表示元素的clientWidth 和 clientHeight。</p>
+<h2 id="1-2可读可写属性"><a href="#1-2可读可写属性" class="headerlink" title="1.2可读可写属性"></a>1.2可读可写属性</h2><h3 id="1-scrollTop和scrollLeft"><a href="#1-scrollTop和scrollLeft" class="headerlink" title="(1).scrollTop和scrollLeft"></a>(1).scrollTop和scrollLeft</h3><p>表示当元素内部的内容超出其宽高时，元素被卷起的宽度和高度。</p>
+<h3 id="DOM-style-属性"><a href="#DOM-style-属性" class="headerlink" title="DOM.style.属性"></a>DOM.style.属性</h3><p>对于一个DOM元素，它的style属性返回的是一个对象，这个对象中的属性时可读可写的，在读的时候返回的值通常是带有单位的，但是他只能获取到该元素的行内样式，而不能获取到该元素最终计算好的样式，这就是在读取属性指的时候和上面的区别，如果要获取到计算好的属性样式，使用obj.currentstyle(IE)和getComputedStyle(IE浏览器除外)</p>
+<h1 id="2-Event对象"><a href="#2-Event对象" class="headerlink" title="2.Event对象"></a>2.Event对象</h1><p>在JS中很多事件操作都涉及到位置属性</p>
+<h2 id="1-clientX和clientY"><a href="#1-clientX和clientY" class="headerlink" title="(1).clientX和clientY"></a>(1).clientX和clientY</h2><p>当事件触发的时候，事件触发的位置（一般是鼠标点击的位置）位于浏览器的坐标。浏览器的左上角为(0,0),该属性计算事件触发的位置的坐标。</p>
+<h2 id="2-screenX和screenY"><a href="#2-screenX和screenY" class="headerlink" title="(2).screenX和screenY"></a>(2).screenX和screenY</h2><p>当事件触发的时候，事件触发的位置（一般是鼠标点击的位置）位于屏幕的坐标。屏幕的左上角为(0,0),该属性计算事件触发的位置的坐标。</p>
+<h2 id="3-offsetX和offsetY"><a href="#3-offsetX和offsetY" class="headerlink" title="(3).offsetX和offsetY"></a>(3).offsetX和offsetY</h2><p>当事件触发的时候，事件触发位置相对于该事件源对象左上角的位置</p>
+<h2 id="4-pageX和pageY"><a href="#4-pageX和pageY" class="headerlink" title="(4).pageX和pageY"></a>(4).pageX和pageY</h2><p>该属性获取事件触发的位置相对于页面左上角的位置，也就是说如果页面没有滚动条，该属性的值和clientX和clientY是等价的，但是当出现滚动条的时候pageX是大于clientX的。</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>打赏一点吧</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="陈超 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="陈超 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/css/" rel="tag"># css</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/14/类型转换/" rel="next" title="类型转换">
+                <i class="fa fa-chevron-left"></i> 类型转换
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -348,8 +575,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -447,6 +683,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-DOM部分"><span class="nav-number">1.</span> <span class="nav-text">1.DOM部分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1只读属性"><span class="nav-number">1.1.</span> <span class="nav-text">1.1只读属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-clientWidth-和-clientHeight"><span class="nav-number">1.1.1.</span> <span class="nav-text">(1).clientWidth 和 clientHeight</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-offsetWidth和offsetHeight"><span class="nav-number">1.1.2.</span> <span class="nav-text">(2).offsetWidth和offsetHeight</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-clientTop和clientLeft"><span class="nav-number">1.1.3.</span> <span class="nav-text">(3).clientTop和clientLeft</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-offsetTop和offsetLeft"><span class="nav-number">1.1.4.</span> <span class="nav-text">(4).offsetTop和offsetLeft</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-scrollHeight和scrollWidth"><span class="nav-number">1.1.5.</span> <span class="nav-text">(5).scrollHeight和scrollWidth</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2可读可写属性"><span class="nav-number">1.2.</span> <span class="nav-text">1.2可读可写属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-scrollTop和scrollLeft"><span class="nav-number">1.2.1.</span> <span class="nav-text">(1).scrollTop和scrollLeft</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM-style-属性"><span class="nav-number">1.2.2.</span> <span class="nav-text">DOM.style.属性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Event对象"><span class="nav-number">2.</span> <span class="nav-text">2.Event对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-clientX和clientY"><span class="nav-number">2.1.</span> <span class="nav-text">(1).clientX和clientY</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-screenX和screenY"><span class="nav-number">2.2.</span> <span class="nav-text">(2).screenX和screenY</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-offsetX和offsetY"><span class="nav-number">2.3.</span> <span class="nav-text">(3).offsetX和offsetY</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-pageX和pageY"><span class="nav-number">2.4.</span> <span class="nav-text">(4).pageX和pageY</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

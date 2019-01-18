@@ -1,16 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[2018年总结]]></title>
-    <url>%2F2019%2F01%2F12%2Ffirst%2F</url>
-    <content type="text"><![CDATA[一份迟来的年终总结，躺在床上怎么也睡不着，于是就起身拿起电脑开撸了这份总结。 回想2018年，更多的是收获吧。晚上在清理手机照片的时候发现去年也并没有留下太多的回忆，也许是去年过的太快了吧，让我没有喘息的机会。 学习在2018年庆新自己并没有再像大一的时候那样的放纵自己了，大学有很多的时间可以去做你自己想做的事情，但是如果你没有利用好这些时间，可能会让自己糜烂，自己也是在大一的时候浑浑噩噩的度过，也不知道自己在干了些什么。所幸觉醒的也并不算晚吧，在2018年年初的时候选择了前端开发作为自己以后学习的方向，因为前端开发的所做即得的事，还是很有趣的不像其他语言那么枯燥。在学习中每次能做出一个简单的静态网页和一个小demo自己也会开心半天。但是在2018年上半年的时候自己看书断断续续的学习也没有取得什么实质性的进步。但是在上半年中也算是学会了基础，入门了前端的门吧。在暑假的时间自己留校继续学习，开始深入学习，在寝室每天顶着30多度的高温也是很不容易呢，但是有心中所向往的东西支撑着，自己还是坚持了下来。在大三开学的时候加入了学院工作室，与大家一起学习进步，下半年也许是进步最快的时间段了吧。在期间深入学习前端框架，在12月的时候开始一个人前后端一起搭建的个人博客，由于期间有很多考试与及技术原因也停了一段时间，的是目前博客的功能也相对完善，计划在寒假进一步完善，然后在大三下开学的时候发布上线。 回想自己的2018年学习经历，差不多也还算满意吧，但是也有很多还不足的地方。在新的一年的自己也要努力学习，进一步学习，查漏补缺以前的基础知识。对了，期末考加油！！！ 家庭在过去的一年里家人们也都健健康康的，这是我最开心的事了，也是我最大的愿望。妈妈没有像以前那样辛苦的工作了，姐姐也把自己的另一半带回了家。在国庆节的时候一家人聚在一起在外婆家烤肉，其乐融融，所有的人都很开心，自己也感到了家人给自己带来了很多东西。外婆在今年也将迎来自己的70大寿了。2018年大家都很快乐健康，新的一年也要如此。 爱情在2017年的尾声，收获了自己的爱情，一起的度过了2017、2018年迎来了2019年，在这一年里都更加相互了解彼此了，一起相互鼓励在学习上取得进步。在2018五一节的时候一起去了重庆，是一段很美好的回忆呢，在下半年本来打算去乐山玩的，可是这学期课实在太多了，周六也要上课，于是乎计划就泡汤了，但是也一起去了成都附近的地方玩。吵吵闹闹的度过了2017年、2018年，希望我们能一直这样吵吵闹闹的度过余生。 总结度过了2018美好的一年，我们也都终将迎来更美好的一年。如此循环，不能结束。人生只有短短的八九十年，我们不能一直寻乐，要及时寻乐，做更多有意义的事情。 新的一年，希望家人们、朋友们都健健康康快快乐乐的度过这一年！！！]]></content>
+    <title><![CDATA[浏览器中的各种宽高]]></title>
+    <url>%2F2019%2F01%2F18%2F%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E7%9A%84%E5%90%84%E7%A7%8D%E5%AE%BD%E9%AB%98%2F</url>
+    <content type="text"><![CDATA[1.DOM部分1.1只读属性只能获取，不能设置，获取的值是不带单位的 (1).clientWidth 和 clientHeight获取可视区部分的宽高，即padding+content，如果有滚动条，则该属性的值就是原本的宽高减去滚动条的宽度。 (2).offsetWidth和offsetHeight获取元素的border+padding+content的宽高，该属性和内部的内容是否超出元素大小无关，只与原来的border和width有关。 (3).clientTop和clientLeft获取元素的border的宽度和高度 (4).offsetTop和offsetLeft说到这一对属性就要说到offsetParent,其表示当前元素的离自己最近的具有定位的父级元素，该父级元素就是当前元素的offsetParent，如果一直向上查找也找不到这样一个父级元素，那么当前元素的ofsetParent就是body元素。 offsetLeft和offsetTop就是指的是当前元素当对于其offsetParent的左边距离和上边距离，级当前元素的border到它的offsetParent的border的距离。 (5).scrollHeight和scrollWidth当元素内部的内容超出其宽的和高度的时候，scrollHeight和scrollWidth表示内部元素的实际宽高，当没有超出其宽高时表示元素的clientWidth 和 clientHeight。 1.2可读可写属性(1).scrollTop和scrollLeft表示当元素内部的内容超出其宽高时，元素被卷起的宽度和高度。 DOM.style.属性对于一个DOM元素，它的style属性返回的是一个对象，这个对象中的属性时可读可写的，在读的时候返回的值通常是带有单位的，但是他只能获取到该元素的行内样式，而不能获取到该元素最终计算好的样式，这就是在读取属性指的时候和上面的区别，如果要获取到计算好的属性样式，使用obj.currentstyle(IE)和getComputedStyle(IE浏览器除外) 2.Event对象在JS中很多事件操作都涉及到位置属性 (1).clientX和clientY当事件触发的时候，事件触发的位置（一般是鼠标点击的位置）位于浏览器的坐标。浏览器的左上角为(0,0),该属性计算事件触发的位置的坐标。 (2).screenX和screenY当事件触发的时候，事件触发的位置（一般是鼠标点击的位置）位于屏幕的坐标。屏幕的左上角为(0,0),该属性计算事件触发的位置的坐标。 (3).offsetX和offsetY当事件触发的时候，事件触发位置相对于该事件源对象左上角的位置 (4).pageX和pageY该属性获取事件触发的位置相对于页面左上角的位置，也就是说如果页面没有滚动条，该属性的值和clientX和clientY是等价的，但是当出现滚动条的时候pageX是大于clientX的。]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
       <tags>
-        <tag>总结</tag>
+        <tag>JavaScript</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hello World 111]]></title>
+    <title><![CDATA[类型转换]]></title>
+    <url>%2F2019%2F01%2F14%2F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%2F</url>
+    <content type="text"><![CDATA[要弄明白这个问题首先我们要了解JS中的类型转换以及引用类型的转换，我们通常把值从一种类型转化为另一种类型称为类型转换，这是显示的情况；隐式的情况称为强制类型转换。 一、引用类型的转换 在JavaScript中强制类型转换总是返回标量基本类型的值，不会返回对象和函数。 对于对象（包括数组），为了将值转换为相应基本类型的值，抽象操作ToPrimitive会首先检查该值是否有valueOf()方法，如果有并且返回基本类型的值，就使用该方法进行强制类型转换；如果没有就使用toString()发放进行强制类型转换，如果valueof()和toString()都不存则会报错。 我们在对象obj1、obj2上面分别定义了valueOf()和toString(),对象先会在自己身上查找这两个方法，如果有则会覆盖原型的方法，如果对象没有这个方法，然后在到原型上查找。 下面这个例子没有定义上面的两个方法，则会调用原型链上的方法。 下面这个例子中我们使用Object.create(null)创建了一个对象,它没有继承任何原型方法，由于它的__proto__为undefined,自身也没有定义valueOf()和toString()所以在进行强制类型转换的时候会报错。 如果我们给它添加一个valueOf()或toString()： 二、字符串和数字的隐示强制类型转换在很多时候我们经常使用+来进行数字加法和字符串拼接。123456let a = '12'let b = '10'let c = 12let d = 10let add1 = a + b // '1210'let add2 = c + d // 22 这里会得到两个不同的结果，原因在于：第一个执行的是字符串拼接的操作，第二个执行的是数字加法操作。 123let arr1 = [1,2]let arr2 = [3,4]arr1 + arr2 = '1,23,4' 因为上上面的数组通过toString()方法也能转换为字符串所以也是执行字符串拼接操作。 在书上这样写道： 如果某个操作数是字符串或则能通过以下操作转换为字符串的话，+将执行字符串拼接操作。如果其中一个操作数是对象（包括数组），则首先对其调用ToPrimitive抽象操作，该抽象操作再调用[[DefaultValue]],以数字作为上下文。 接下来就是讨论我们今天的问题了:{}+[] != []+{}我们先对[]和{}进行单独分析： 1234[].toString() // ""+[] // 0 这里先执行toString()转换为"",然后使用 + 执行强制类型转换为 0&#123;&#125;.toString() // "[object Object]"+&#123;&#125; // NaN []+{}: 这里的加号执行的是字符串拼接的操作，[]和{}分别调用toString()方法，最后就相当于：&quot;&quot; + &quot;[object Object]&quot; 所以最后结果是：”[object Object]” {}+[]: 这里有一点特殊 {}会被看作是一个独立的代码块，相当于：1234&#123; &#125;+[] 这里{}代码块不执行任何操作，而且代码块结尾不需要分号，所以也不存在语法上的问题，所以在这里就相当于执行 +[],所以最后结果是0. 最后由于本还在在校学生一名才疏学浅，有什么问题希望大家提出来，希望与大家一起进步。 参考书籍: 你不知道的JavaScript]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[JavaScript事件循环机制]]></title>
+    <url>%2F2019%2F01%2F12%2FJavaScript%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%9C%BA%E5%88%B6%2F</url>
+    <content type="text"><![CDATA[JavaScript是一门单线程的语言，这就意味着JS无法进行多线程编程，所以JS中存在许多异步的操作。而异步操作的核心就是事件循环。 一、什么是事件循环事件循环就是在执行上下文的过程中，执行栈中对事件进行入栈和出栈，如果在执行的过程中遇到了一些异步操作Ajax，settimeout，会先将它们交给浏览器的其他模块去处理，在执行完后再把它们的回调函数放到事件队列中，在执行栈执行完同步事件后再从事件队列中取出事件压入执行栈。 二、事件队列、执行栈事件队列是一个存储着待执行任务的队列，其执行时间遵循先来先服务的顺序，异步任务在执行完之后它的回调函数会放到事件队列中。执行栈是一个函数调用栈的运行容器，当执行栈执行完当前任务后，JS引擎便会检查事件队列，如果事件队列不为空，事件队列的队头事件便会压入执行栈中继续执行。 三、Promise总所周知，Promise的出现是为了解决回调地狱的问题，所以简单来说Promise是一个异步容器，里面存放着某个异步操作。Promise构造函数接受一个函数作为参数，该函数接受两个函数resolve和reject，这两个函数表示Promise变为完成或拒状态。Promise正是通过这两个状态来控制异步操作的结果，在声明的是Promise传入的函数参数会立即执行。 请看下面一段代码： 1234567891011121314 let promise = new Promise(function(resolve, reject) &#123; console.log('Promise'); resolve();&#125;);promise.then(function() &#123; console.log('resolved');&#125;);console.log('script');// Promise// script// resolved 四、Macrotasks和Microtasks 一个事件循环有一个或者多个事件队列； 每个事件循环都有一个microtask队列 macrotask队列就是我们常说的任务队列，microtask队列不是任务队列 一个任务可以被放入到macrotask队列，也可以放入microtask队列当一个任务被放入microtask或者macrotask队列后，准备工作就已经结束，这时候可以开始执行任务了。 macrotasks: setTimeout setInterval setImmediate requestAnimationFrame I/O UI rendering microtasks: process.nextTick Promises Object.observe MutationObserver 由此可见，setTimeout和Promises不是同一类的任务，处理方式应该会有区别，具体的处理方式有什么不同呢？我们来看下面这一段代码： 12345678910111213141516171819202122setTimeout(function() &#123; console.log(1)&#125;, 0)let promise = new Promise(function(resolve, reject) &#123; console.log(2) for(let i = 0;i &lt; 1000; i++)&#123; if (i === 999) &#123; resolve() &#125; &#125; console.log(3)&#125;)promise.then( function() &#123; console.log(4)&#125;)console.log(5)// 2 // 3 // 5// 4// 1 是不是感觉很奇怪？ 4 在 1 之后执行。即便是setTimeout的延迟为0。 原因在于Promise中的then执行的事件也就是console.log(4)会被推到microtasks中去，setTimeout会被推到macrotasks任务队列中去。microtasks的作用是用来调用调度当前执行的脚本结束后需要立即执行的任务，以避免付出额外的task费用。 在每一次的事件循环中，macrotask只会提取一个任务，而microtask会一直提取直到microtask队列为空。在主线程执行完之后，会调用microtask中的任务直到最后一个任务被执行。 也就是说执行顺序是： 开始 -&gt; 取事件队列第一个task执行 -&gt; 取microtask全部任务依次执行 -&gt; 取事件队列下一个任务执行 -&gt; 再次取出microtask全部任务执行 -&gt; … 这样循环往复 五、分析上面的代码1、当遇到setTimeout时，会把它的回调函数console.log(1)放在macrotask事件队列中。2、接下来遇到Peomise，首先会执行console.log(2)打印2，然后执行for循环，在for循环执行完成后Peomise的状态变为resolve，随后把它的回调函数console.log(4)推到microtask中去，然后立即执行console.log(3)3、然后执行cnosole,log(5),这样就依次打印了 2，3，5。4、此时所有的同步代码执行完成，检查microtask，完成器所有任务，则输出4。5、再执行macro中的任务，输出1。]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2018年总结]]></title>
+    <url>%2F2019%2F01%2F06%2Ffirst%2F</url>
+    <content type="text"><![CDATA[一份迟来的年终总结，躺在床上怎么也睡不着，于是就起身拿起电脑开撸了这份总结。 回想2018年，更多的是收获吧。晚上在清理手机照片的时候发现去年也并没有留下太多的回忆，也许是去年过的太快了吧，让我没有喘息的机会。 学习在2018年庆新自己并没有再像大一的时候那样的放纵自己了，大学有很多的时间可以去做你自己想做的事情，但是如果你没有利用好这些时间，可能会让自己糜烂，自己也是在大一的时候浑浑噩噩的度过，也不知道自己在干了些什么。所幸觉醒的也并不算晚吧，在2018年年初的时候选择了前端开发作为自己以后学习的方向，因为前端开发的所做即得的事，还是很有趣的不像其他语言那么枯燥。在学习中每次能做出一个简单的静态网页和一个小demo自己也会开心半天。但是在2018年上半年的时候自己看书断断续续的学习也没有取得什么实质性的进步。但是在上半年中也算是学会了基础，入门了前端的门吧。在暑假的时间自己留校继续学习，开始深入学习，在寝室每天顶着30多度的高温也是很不容易呢，但是有心中所向往的东西支撑着，自己还是坚持了下来。在大三开学的时候加入了学院工作室，与大家一起学习进步，下半年也许是进步最快的时间段了吧。在期间深入学习前端框架，在12月的时候开始一个人前后端一起搭建的个人博客，由于期间有很多考试与及技术原因也停了一段时间，的是目前博客的功能也相对完善，计划在寒假进一步完善，然后在大三下开学的时候发布上线。 回想自己的2018年学习经历，差不多也还算满意吧，但是也有很多还不足的地方。在新的一年的自己也要努力学习，进一步学习，查漏补缺以前的基础知识。对了，期末考加油！！！ 此文后续继续更新…]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
     <url>%2F2018%2F11%2F07%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <content type="text"><![CDATA[123// 话不多说首先作为一个专业的程序员让我们先写下一段代码，多的不会console.log()]]></content>
   </entry>
 </search>

@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="JavaScript,">
 
 
 
@@ -86,14 +86,26 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="要弄明白这个问题首先我们要了解JS中的类型转换以及引用类型的转换，我们通常把值从一种类型转化为另一种类型称为类型转换，这是显示的情况；隐式的情况称为强制类型转换。 一、引用类型的转换 在JavaScript中强制类型转换总是返回标量基本类型的值，不会返回对象和函数。  对于对象（包括数组），为了将值转换为相应基本类型的值，抽象操作ToPrimitive会首先检查该值是否有valueOf()方法，如">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="类型转换">
+<meta property="og:url" content="http://yoursite.com/2019/01/14/类型转换/index.html">
 <meta property="og:site_name" content="chen&#39;blog">
+<meta property="og:description" content="要弄明白这个问题首先我们要了解JS中的类型转换以及引用类型的转换，我们通常把值从一种类型转化为另一种类型称为类型转换，这是显示的情况；隐式的情况称为强制类型转换。 一、引用类型的转换 在JavaScript中强制类型转换总是返回标量基本类型的值，不会返回对象和函数。  对于对象（包括数组），为了将值转换为相应基本类型的值，抽象操作ToPrimitive会首先检查该值是否有valueOf()方法，如">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-12T02:51:31.074Z">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/12/25/167e32beaab561a2?w=592&h=362&f=png&s=30915">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/12/25/167e32c33b58c0da?w=751&h=62&f=png&s=3828">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/12/25/167e32fed7a711f4?w=757&h=122&f=png&s=6930">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/12/25/167e332336747eb1?w=622&h=101&f=png&s=14139">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/12/25/167e332647b77fbc?w=767&h=66&f=png&s=8019">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/12/25/167e33760d908748?w=510&h=189&f=png&s=26743">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/12/25/167e33a067ced878?w=756&h=61&f=png&s=4187">
+<meta property="og:updated_time" content="2019-01-18T14:00:05.651Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
+<meta name="twitter:title" content="类型转换">
+<meta name="twitter:description" content="要弄明白这个问题首先我们要了解JS中的类型转换以及引用类型的转换，我们通常把值从一种类型转化为另一种类型称为类型转换，这是显示的情况；隐式的情况称为强制类型转换。 一、引用类型的转换 在JavaScript中强制类型转换总是返回标量基本类型的值，不会返回对象和函数。  对于对象（包括数组），为了将值转换为相应基本类型的值，抽象操作ToPrimitive会首先检查该值是否有valueOf()方法，如">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/12/25/167e32beaab561a2?w=592&h=362&f=png&s=30915">
 
 
 
@@ -123,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/">
+  <link rel="canonical" href="http://yoursite.com/2019/01/14/类型转换/">
 
 
 
 
 
-  <title>about | chen'blog</title>
+  <title>类型转换 | chen'blog</title>
   
 
 
@@ -286,33 +298,274 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/14/类型转换/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陈超">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="chen'blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">about</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">类型转换</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-14T23:54:37+08:00">
+                2019-01-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/14/类型转换/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/14/类型转换/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读数<i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  856
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>要弄明白这个问题首先我们要了解JS中的<strong>类型转换</strong>以及<strong>引用类型的转换</strong>，我们通常把值从一种类型转化为另一种类型称为<strong>类型转换</strong>，这是显示的情况；隐式的情况称为<strong>强制类型转换</strong>。</p>
+<h1 id="一、引用类型的转换"><a href="#一、引用类型的转换" class="headerlink" title="一、引用类型的转换"></a>一、引用类型的转换</h1><blockquote>
+<p>在JavaScript中强制类型转换总是返回标量基本类型的值，不会返回对象和函数。</p>
+</blockquote>
+<p>对于对象（包括数组），为了将值转换为相应基本类型的值，抽象操作<code>ToPrimitive</code>会首先检查该值是否有<code>valueOf()</code>方法，如果有并且返回基本类型的值，就使用该方法进行强制类型转换；如果没有就使用<code>toString()</code>发放进行强制类型转换，如果<code>valueof()</code>和<code>toString()</code>都不存则会报错。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/12/25/167e32beaab561a2?w=592&amp;h=362&amp;f=png&amp;s=30915" alt=""></p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/12/25/167e32c33b58c0da?w=751&amp;h=62&amp;f=png&amp;s=3828" alt=""><br>我们在对象obj1、obj2上面分别定义了<code>valueOf()</code>和<code>toString()</code>,对象先会在自己身上查找这两个方法，如果有则会覆盖原型的方法，如果对象没有这个方法，然后在到原型上查找。</p>
+<p>下面这个例子没有定义上面的两个方法，则会调用原型链上的方法。<br><img src="https://user-gold-cdn.xitu.io/2018/12/25/167e32fed7a711f4?w=757&amp;h=122&amp;f=png&amp;s=6930" alt=""></p>
+<p>下面这个例子中我们使用<code>Object.create(null)</code>创建了一个对象,它没有继承任何原型方法，由于它的<code>__proto__</code>为<code>undefined</code>,自身也没有定义<code>valueOf()</code>和<code>toString()</code>所以在进行强制类型转换的时候会报错。<br><img src="https://user-gold-cdn.xitu.io/2018/12/25/167e332336747eb1?w=622&amp;h=101&amp;f=png&amp;s=14139" alt=""><br><img src="https://user-gold-cdn.xitu.io/2018/12/25/167e332647b77fbc?w=767&amp;h=66&amp;f=png&amp;s=8019" alt=""></p>
+<p>如果我们给它添加一个<code>valueOf()</code>或<code>toString()</code>：<br><img src="https://user-gold-cdn.xitu.io/2018/12/25/167e33760d908748?w=510&amp;h=189&amp;f=png&amp;s=26743" alt=""><br><img src="https://user-gold-cdn.xitu.io/2018/12/25/167e33a067ced878?w=756&amp;h=61&amp;f=png&amp;s=4187" alt=""></p>
+<h1 id="二、字符串和数字的隐示强制类型转换"><a href="#二、字符串和数字的隐示强制类型转换" class="headerlink" title="二、字符串和数字的隐示强制类型转换"></a>二、字符串和数字的隐示强制类型转换</h1><p>在很多时候我们经常使用<code>+</code>来进行数字加法和字符串拼接。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="string">'12'</span></span><br><span class="line"><span class="keyword">let</span> b = <span class="string">'10'</span></span><br><span class="line"><span class="keyword">let</span> c = <span class="number">12</span></span><br><span class="line"><span class="keyword">let</span> d = <span class="number">10</span></span><br><span class="line"><span class="keyword">let</span> add1 = a + b <span class="comment">// '1210'</span></span><br><span class="line"><span class="keyword">let</span> add2 = c + d <span class="comment">// 22</span></span><br></pre></td></tr></table></figure></p>
+<p>这里会得到两个不同的结果，原因在于：第一个执行的是字符串拼接的操作，第二个执行的是数字加法操作。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line"><span class="keyword">let</span> arr2 = [<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">arr1 + arr2 = <span class="string">'1,23,4'</span></span><br></pre></td></tr></table></figure>
+<p>因为上上面的数组通过<code>toString()</code>方法也能转换为字符串所以也是执行字符串拼接操作。</p>
+<p>在书上这样写道：</p>
+<blockquote>
+<p>如果某个操作数是字符串或则能通过以下操作转换为字符串的话，+将执行字符串拼接操作。如果其中一个操作数是对象（包括数组），则首先对其调用<code>ToPrimitive</code>抽象操作，该抽象操作再调用[[DefaultValue]],以数字作为上下文。</p>
+</blockquote>
+<h2 id="接下来就是讨论我们今天的问题了"><a href="#接下来就是讨论我们今天的问题了" class="headerlink" title="接下来就是讨论我们今天的问题了:{}+[] != []+{}"></a>接下来就是讨论我们今天的问题了:<code>{}+[] != []+{}</code></h2><p>我们先对<code>[]</code>和<code>{}</code>进行单独分析：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[].toString() <span class="comment">// ""</span></span><br><span class="line">+[] <span class="comment">// 0  这里先执行toString()转换为"",然后使用 + 执行强制类型转换为 0</span></span><br><span class="line">&#123;&#125;.toString() <span class="comment">// "[object Object]"</span></span><br><span class="line">+&#123;&#125; <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>[]+{}: 这里的加号执行的是字符串拼接的操作，[]和{}分别调用<code>toString()</code>方法，最后就相当于：<br><code>&quot;&quot; + &quot;[object Object]&quot;</code> 所以最后结果是：”[object Object]”</li>
+<li>{}+[]: 这里有一点特殊 <code>{}</code>会被看作是一个独立的代码块，相当于：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">+[]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这里<code>{}</code>代码块不执行任何操作，而且代码块结尾不需要分号，所以也不存在语法上的问题，所以在这里就相当于执行 <code>+[]</code>,所以最后结果是0.</p>
+<blockquote>
+<p>最后由于本还在在校学生一名才疏学浅，有什么问题希望大家提出来，希望与大家一起进步。</p>
+</blockquote>
+<p>参考书籍:  <a href="http://www.ituring.com.cn/book/1563" target="_blank" rel="noopener">你不知道的JavaScript</a></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>打赏一点吧</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="陈超 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="陈超 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/12/JavaScript事件循环机制/" rel="next" title="JavaScript事件循环机制">
+                <i class="fa fa-chevron-left"></i> JavaScript事件循环机制
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/18/浏览器中的各种宽高/" rel="prev" title="浏览器中的各种宽高">
+                浏览器中的各种宽高 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -348,8 +601,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -447,6 +709,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、引用类型的转换"><span class="nav-number">1.</span> <span class="nav-text">一、引用类型的转换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、字符串和数字的隐示强制类型转换"><span class="nav-number">2.</span> <span class="nav-text">二、字符串和数字的隐示强制类型转换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#接下来就是讨论我们今天的问题了"><span class="nav-number">2.1.</span> <span class="nav-text">接下来就是讨论我们今天的问题了:{}+[] != []+{}</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
